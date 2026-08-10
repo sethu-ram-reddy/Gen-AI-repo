@@ -203,7 +203,7 @@ def analyze_resume(request: ResumeRequest):
         )
 
         # Structured LLM call
-        response = client.responses.parse(
+        response = client.response.parse(
             model=MODEL_NAME,
             instructions=instructions,
             input=request.resume_text,
