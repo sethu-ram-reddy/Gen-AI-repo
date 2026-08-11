@@ -203,7 +203,6 @@ async def compact_conversation(
 
 
     # We are starting a new response chain.
-    #
     # Old context is now represented by the summary.
     state.previous_response_id = None
 
