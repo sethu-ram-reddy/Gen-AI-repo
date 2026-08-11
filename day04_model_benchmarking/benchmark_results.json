@@ -1,0 +1,779 @@
+{
+  "results": [
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "test_id": "rag_explanation",
+      "category": "technical_explanation",
+      "success": true,
+      "passed": true,
+      "response": "- **Retrieval-Augmented Generation (RAG)** combines information retrieval with text generation: a user\u2019s question is used to find relevant external documents before answering.\n- The question and documents are converted into **embeddings**\u2014numerical representations of meaning\u2014and stored or searched in a **vector database** to retrieve semantically similar content.\n- The retrieved context is provided to an **LLM**, which uses it to generate a more accurate, current, and source-grounded response.",
+      "checks": [
+        "Keyword 'embedding': True",
+        "Keyword 'vector': True",
+        "Keyword 'LLM': True",
+        "Word count 67/120: True"
+      ],
+      "input_tokens": 36,
+      "output_tokens": 126,
+      "total_tokens": 162,
+      "latency_seconds": 3.779,
+      "cost_usd": 0.0001584,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "test_id": "async_explanation",
+      "category": "conciseness",
+      "success": true,
+      "passed": true,
+      "response": "Async programming is useful for LLM APIs because it allows applications to handle multiple concurrent requests without blocking while waiting for each model response. This improves responsiveness, throughput, and resource utilization, especially when API calls have significant network latency.",
+      "checks": [
+        "Keyword 'concurr': True",
+        "Sentence count 2/2: True"
+      ],
+      "input_tokens": 39,
+      "output_tokens": 49,
+      "total_tokens": 88,
+      "latency_seconds": 1.593,
+      "cost_usd": 6.66e-05,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "test_id": "http_429",
+      "category": "classification",
+      "success": true,
+      "passed": true,
+      "response": "RETRY",
+      "checks": [
+        "Exact answer: True"
+      ],
+      "input_tokens": 35,
+      "output_tokens": 22,
+      "total_tokens": 57,
+      "latency_seconds": 3.158,
+      "cost_usd": 3.34e-05,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "test_id": "token_cost_reasoning",
+      "category": "reasoning",
+      "success": true,
+      "passed": true,
+      "response": "150000",
+      "checks": [
+        "Exact answer: True"
+      ],
+      "input_tokens": 45,
+      "output_tokens": 23,
+      "total_tokens": 68,
+      "latency_seconds": 1.38,
+      "cost_usd": 3.66e-05,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "test_id": "resume_extraction",
+      "category": "structured_output",
+      "success": true,
+      "passed": true,
+      "response": "{\n  \"name\": \"Alex Morgan\",\n  \"skills\": [\"Python\", \"FastAPI\", \"SQL\", \"Docker\"],\n  \"experience_years\": 3\n}",
+      "checks": [
+        "Valid expected JSON: True"
+      ],
+      "input_tokens": 68,
+      "output_tokens": 40,
+      "total_tokens": 108,
+      "latency_seconds": 1.174,
+      "cost_usd": 6.16e-05,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "test_id": "format_control",
+      "category": "instruction_following",
+      "success": true,
+      "passed": true,
+      "response": "BENEFIT: Enable fast similarity searches across high-dimensional data.\nBENEFIT: Support semantic search beyond exact keyword matching.\nBENEFIT: Scale efficiently for large collections of unstructured data.",
+      "checks": [
+        "Line count 3/3: True",
+        "Required prefix 'BENEFIT:': True"
+      ],
+      "input_tokens": 39,
+      "output_tokens": 43,
+      "total_tokens": 82,
+      "latency_seconds": 1.137,
+      "cost_usd": 5.94e-05,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "test_id": "rag_vs_finetuning",
+      "category": "technical_reasoning",
+      "success": true,
+      "passed": true,
+      "response": "B  \nRAG is better for frequently changing policy documents because it retrieves the latest information without retraining the model.",
+      "checks": [
+        "Keyword 'B': True",
+        "Keyword 'RAG': True"
+      ],
+      "input_tokens": 49,
+      "output_tokens": 27,
+      "total_tokens": 76,
+      "latency_seconds": 1.787,
+      "cost_usd": 4.22e-05,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "test_id": "api_auth_failure",
+      "category": "production_reasoning",
+      "success": true,
+      "passed": true,
+      "response": "NO",
+      "checks": [
+        "Exact answer: True"
+      ],
+      "input_tokens": 41,
+      "output_tokens": 5,
+      "total_tokens": 46,
+      "latency_seconds": 0.773,
+      "cost_usd": 1.42e-05,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "test_id": "rag_explanation",
+      "category": "technical_explanation",
+      "success": true,
+      "passed": true,
+      "response": "- **Retrieval-Augmented Generation (RAG)** is an approach where an **LLM** supplements its built-in knowledge with relevant external information at answer time, helping it produce more accurate, current, and grounded responses.\n\n- Documents are converted into numerical representations called **embeddings** and stored in a **vector database**. When a user asks a question, the system embeds the question and searches for semantically similar document chunks.\n\n- The retrieved chunks are added to the LLM\u2019s prompt as context, and the LLM generates an answer based on that information. This can reduce hallucinations and enables answers from private, domain-specific, or frequently updated data without retraining the model.",
+      "checks": [
+        "Keyword 'embedding': True",
+        "Keyword 'vector': True",
+        "Keyword 'LLM': True",
+        "Word count 103/120: True"
+      ],
+      "input_tokens": 36,
+      "output_tokens": 142,
+      "total_tokens": 178,
+      "latency_seconds": 2.212,
+      "cost_usd": 0.001776,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "test_id": "async_explanation",
+      "category": "conciseness",
+      "success": true,
+      "passed": true,
+      "response": "Async programming lets an application handle multiple LLM API calls concurrently instead of waiting for each response sequentially, improving throughput and responsiveness. It is especially useful when requests involve network latency, streaming responses, or many independent user tasks.",
+      "checks": [
+        "Keyword 'concurr': True",
+        "Sentence count 2/2: True"
+      ],
+      "input_tokens": 39,
+      "output_tokens": 49,
+      "total_tokens": 88,
+      "latency_seconds": 1.446,
+      "cost_usd": 0.000666,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "test_id": "http_429",
+      "category": "classification",
+      "success": true,
+      "passed": true,
+      "response": "RETRY",
+      "checks": [
+        "Exact answer: True"
+      ],
+      "input_tokens": 35,
+      "output_tokens": 32,
+      "total_tokens": 67,
+      "latency_seconds": 1.262,
+      "cost_usd": 0.000454,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "test_id": "token_cost_reasoning",
+      "category": "reasoning",
+      "success": true,
+      "passed": true,
+      "response": "150000",
+      "checks": [
+        "Exact answer: True"
+      ],
+      "input_tokens": 45,
+      "output_tokens": 6,
+      "total_tokens": 51,
+      "latency_seconds": 0.907,
+      "cost_usd": 0.000162,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "test_id": "resume_extraction",
+      "category": "structured_output",
+      "success": true,
+      "passed": true,
+      "response": "{\"name\":\"Alex Morgan\",\"skills\":[\"Python\",\"FastAPI\",\"SQL\",\"Docker\"],\"experience_years\":3}",
+      "checks": [
+        "Valid expected JSON: True"
+      ],
+      "input_tokens": 68,
+      "output_tokens": 28,
+      "total_tokens": 96,
+      "latency_seconds": 0.976,
+      "cost_usd": 0.000472,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "test_id": "format_control",
+      "category": "instruction_following",
+      "success": true,
+      "passed": true,
+      "response": "BENEFIT: Enables fast semantic similarity search across high-dimensional embeddings.\nBENEFIT: Improves retrieval quality for unstructured data such as text, images, and audio.\nBENEFIT: Scales efficient nearest-neighbor queries for AI and recommendation applications.",
+      "checks": [
+        "Line count 3/3: True",
+        "Required prefix 'BENEFIT:': True"
+      ],
+      "input_tokens": 39,
+      "output_tokens": 56,
+      "total_tokens": 95,
+      "latency_seconds": 1.501,
+      "cost_usd": 0.00075,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "test_id": "rag_vs_finetuning",
+      "category": "technical_reasoning",
+      "success": true,
+      "passed": true,
+      "response": "B) RAG\n\nRAG is better because it can retrieve the latest policy documents without retraining the model every week.",
+      "checks": [
+        "Keyword 'B': True",
+        "Keyword 'RAG': True"
+      ],
+      "input_tokens": 49,
+      "output_tokens": 29,
+      "total_tokens": 78,
+      "latency_seconds": 1.345,
+      "cost_usd": 0.000446,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "test_id": "api_auth_failure",
+      "category": "production_reasoning",
+      "success": true,
+      "passed": true,
+      "response": "NO",
+      "checks": [
+        "Exact answer: True"
+      ],
+      "input_tokens": 41,
+      "output_tokens": 5,
+      "total_tokens": 46,
+      "latency_seconds": 1.097,
+      "cost_usd": 0.000142,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "test_id": "rag_explanation",
+      "category": "technical_explanation",
+      "success": true,
+      "passed": true,
+      "response": "- **Retrieval-Augmented Generation (RAG)** improves an **LLM** by retrieving relevant information from external sources before generating an answer.\n- Documents are converted into **embeddings**\u2014numerical representations of meaning\u2014and stored in a **vector database** for similarity-based search.\n- When a user asks a question, RAG retrieves the most relevant document chunks and gives them to the LLM as context, helping produce more accurate, current, and grounded responses.",
+      "checks": [
+        "Keyword 'embedding': True",
+        "Keyword 'vector': True",
+        "Keyword 'LLM': True",
+        "Word count 65/120: True"
+      ],
+      "input_tokens": 36,
+      "output_tokens": 98,
+      "total_tokens": 134,
+      "latency_seconds": 2.232,
+      "cost_usd": 0.00312,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "test_id": "async_explanation",
+      "category": "conciseness",
+      "success": true,
+      "passed": true,
+      "response": "Async programming lets applications send concurrent requests to LLM APIs without blocking while waiting for responses. This improves throughput and responsiveness, especially when handling many users or tasks at once.",
+      "checks": [
+        "Keyword 'concurr': True",
+        "Sentence count 2/2: True"
+      ],
+      "input_tokens": 39,
+      "output_tokens": 38,
+      "total_tokens": 77,
+      "latency_seconds": 2.516,
+      "cost_usd": 0.001335,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "test_id": "http_429",
+      "category": "classification",
+      "success": true,
+      "passed": true,
+      "response": "RETRY",
+      "checks": [
+        "Exact answer: True"
+      ],
+      "input_tokens": 35,
+      "output_tokens": 30,
+      "total_tokens": 65,
+      "latency_seconds": 2.713,
+      "cost_usd": 0.001075,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "test_id": "token_cost_reasoning",
+      "category": "reasoning",
+      "success": true,
+      "passed": true,
+      "response": "150000",
+      "checks": [
+        "Exact answer: True"
+      ],
+      "input_tokens": 45,
+      "output_tokens": 6,
+      "total_tokens": 51,
+      "latency_seconds": 0.966,
+      "cost_usd": 0.000405,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "test_id": "resume_extraction",
+      "category": "structured_output",
+      "success": true,
+      "passed": true,
+      "response": "{\"name\":\"Alex Morgan\",\"skills\":[\"Python\",\"FastAPI\",\"SQL\",\"Docker\"],\"experience_years\":3}",
+      "checks": [
+        "Valid expected JSON: True"
+      ],
+      "input_tokens": 68,
+      "output_tokens": 28,
+      "total_tokens": 96,
+      "latency_seconds": 1.195,
+      "cost_usd": 0.00118,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "test_id": "format_control",
+      "category": "instruction_following",
+      "success": true,
+      "passed": true,
+      "response": "BENEFIT: Fast similarity search across high-dimensional embeddings\nBENEFIT: Scalable retrieval for large unstructured datasets\nBENEFIT: Improved semantic search, recommendations, and AI applications",
+      "checks": [
+        "Line count 3/3: True",
+        "Required prefix 'BENEFIT:': True"
+      ],
+      "input_tokens": 39,
+      "output_tokens": 42,
+      "total_tokens": 81,
+      "latency_seconds": 2.563,
+      "cost_usd": 0.001455,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "test_id": "rag_vs_finetuning",
+      "category": "technical_reasoning",
+      "success": true,
+      "passed": true,
+      "response": "1. B  \n2. RAG is better because it can retrieve the latest policy documents without retraining the model whenever they change.",
+      "checks": [
+        "Keyword 'B': True",
+        "Keyword 'RAG': True"
+      ],
+      "input_tokens": 49,
+      "output_tokens": 31,
+      "total_tokens": 80,
+      "latency_seconds": 1.67,
+      "cost_usd": 0.001175,
+      "error": null
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "test_id": "api_auth_failure",
+      "category": "production_reasoning",
+      "success": true,
+      "passed": true,
+      "response": "NO",
+      "checks": [
+        "Exact answer: True"
+      ],
+      "input_tokens": 41,
+      "output_tokens": 5,
+      "total_tokens": 46,
+      "latency_seconds": 1.574,
+      "cost_usd": 0.000355,
+      "error": null
+    }
+  ],
+  "summary": [
+    {
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "tests": 8,
+      "passed_tests": 8,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.848,
+      "total_tokens": 687,
+      "total_cost_usd": 0.0004724
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "tests": 8,
+      "passed_tests": 8,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.343,
+      "total_tokens": 699,
+      "total_cost_usd": 0.004868
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "tests": 8,
+      "passed_tests": 8,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.929,
+      "total_tokens": 630,
+      "total_cost_usd": 0.0101
+    }
+  ],
+  "category_analysis": [
+    {
+      "category": "classification",
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 3.158,
+      "total_tokens": 57,
+      "total_cost_usd": 3.34e-05
+    },
+    {
+      "category": "classification",
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.262,
+      "total_tokens": 67,
+      "total_cost_usd": 0.000454
+    },
+    {
+      "category": "classification",
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 2.713,
+      "total_tokens": 65,
+      "total_cost_usd": 0.001075
+    },
+    {
+      "category": "conciseness",
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.593,
+      "total_tokens": 88,
+      "total_cost_usd": 6.66e-05
+    },
+    {
+      "category": "conciseness",
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.446,
+      "total_tokens": 88,
+      "total_cost_usd": 0.000666
+    },
+    {
+      "category": "conciseness",
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 2.516,
+      "total_tokens": 77,
+      "total_cost_usd": 0.001335
+    },
+    {
+      "category": "instruction_following",
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.137,
+      "total_tokens": 82,
+      "total_cost_usd": 5.94e-05
+    },
+    {
+      "category": "instruction_following",
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.501,
+      "total_tokens": 95,
+      "total_cost_usd": 0.00075
+    },
+    {
+      "category": "instruction_following",
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 2.563,
+      "total_tokens": 81,
+      "total_cost_usd": 0.001455
+    },
+    {
+      "category": "production_reasoning",
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 0.773,
+      "total_tokens": 46,
+      "total_cost_usd": 1.42e-05
+    },
+    {
+      "category": "production_reasoning",
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.097,
+      "total_tokens": 46,
+      "total_cost_usd": 0.000142
+    },
+    {
+      "category": "production_reasoning",
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.574,
+      "total_tokens": 46,
+      "total_cost_usd": 0.000355
+    },
+    {
+      "category": "reasoning",
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.38,
+      "total_tokens": 68,
+      "total_cost_usd": 3.66e-05
+    },
+    {
+      "category": "reasoning",
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 0.907,
+      "total_tokens": 51,
+      "total_cost_usd": 0.000162
+    },
+    {
+      "category": "reasoning",
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 0.966,
+      "total_tokens": 51,
+      "total_cost_usd": 0.000405
+    },
+    {
+      "category": "structured_output",
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.174,
+      "total_tokens": 108,
+      "total_cost_usd": 6.16e-05
+    },
+    {
+      "category": "structured_output",
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 0.976,
+      "total_tokens": 96,
+      "total_cost_usd": 0.000472
+    },
+    {
+      "category": "structured_output",
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.195,
+      "total_tokens": 96,
+      "total_cost_usd": 0.00118
+    },
+    {
+      "category": "technical_explanation",
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 3.779,
+      "total_tokens": 162,
+      "total_cost_usd": 0.0001584
+    },
+    {
+      "category": "technical_explanation",
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 2.212,
+      "total_tokens": 178,
+      "total_cost_usd": 0.001776
+    },
+    {
+      "category": "technical_explanation",
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 2.232,
+      "total_tokens": 134,
+      "total_cost_usd": 0.00312
+    },
+    {
+      "category": "technical_reasoning",
+      "model_id": "gpt-5.6-luna",
+      "model_name": "GPT-5.6 Luna",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.787,
+      "total_tokens": 76,
+      "total_cost_usd": 4.22e-05
+    },
+    {
+      "category": "technical_reasoning",
+      "model_id": "gpt-5.6-terra",
+      "model_name": "GPT-5.6 Terra",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.345,
+      "total_tokens": 78,
+      "total_cost_usd": 0.000446
+    },
+    {
+      "category": "technical_reasoning",
+      "model_id": "gpt-5.6-sol",
+      "model_name": "GPT-5.6 Sol",
+      "tests": 1,
+      "passed_tests": 1,
+      "pass_rate_percent": 100.0,
+      "api_success_rate_percent": 100.0,
+      "average_latency_seconds": 1.67,
+      "total_tokens": 80,
+      "total_cost_usd": 0.001175
+    }
+  ]
+}
